@@ -1,0 +1,480 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #444;
+    padding: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    padding: 10px;
+    z-index: 1;
+}
+
+nav li:hover > ul {
+    display: block;
+}
+
+/* ... (previous styles) */
+
+/* Styles for the advertisement section */
+/* ... (previous styles) */
+
+/* Styles for the advertisement section */
+.advertisement {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    height: 50vh; /* Set height to 50% of the viewport height */
+    overflow: hidden; /* Hide overflow to ensure proper scaling */
+}
+
+.advertisement img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    image-rendering: auto; /* Use the default image rendering */
+}
+
+.advertisement h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f5ebeb;
+}
+
+/* ... (remaining styles) */
+
+
+section {
+    padding: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0; /* Add space before the cards */
+}
+
+.card,
+.deal-card,
+.category-card {
+    width: 300px;
+    height: 400px; /* Increase the height of the product image cards */
+    margin: 0 10px 30px; /* Adjust margin for consistent spacing */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    white-space: normal;
+    text-align: center;
+    position: relative;
+}
+
+.card img,
+.deal-card img,
+.category-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.card p,
+.deal-card p,
+.category-card p {
+    margin-top: 5px;
+}
+.card button,
+.deal-card button,
+.category-card button {
+    position: absolute;
+    bottom: 15px;
+    width: calc(100% - 30px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    padding: 10px; /* Add padding to the button */
+    background-color: #007BFF; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition effect to background color */
+}
+.card button:hover,
+.deal-card button:hover,
+.category-card button:hover {
+    background-color: #0056b3; /* Change background color on hover */
+}
+
+.scrollable-row {
+    white-space: nowrap;
+    overflow-x: auto;
+    scrollbar-width: auto;
+    -ms-overflow-style: auto;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.scrollable-row .deal-card,
+.scrollable-row .category-card {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+.scrollable-row::-webkit-scrollbar {
+    width: 0; /* Hide the scrollbar */
+}
+
+.scrollable-row::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Updated styles for the Special Category card */
+.category-card {
+    width: 200px;
+    height: 250px; /* Adjusted height for the cards */
+    margin: 0 10px 30px; /* Adjust margin for consistent spacing */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    white-space: normal;
+    text-align: center;
+    position: relative;
+}
+
+.category-card img {
+    max-width: 100%;
+    height: 50%; /* Adjusted height for the image */
+    margin-bottom: 10px; /* Adjust margin between image and text */
+}
+
+.category-card h3 {
+    font-size: 1em; /* Adjusted font size for the heading */
+    margin-bottom: 8px; /* Updated margin for better spacing between heading and description */
+}
+
+.category-card p {
+    font-size: 0.8em; /* Adjusted font size for the description */
+    margin-top: 8px; /* Updated margin for better spacing between text and button */
+    margin-bottom: 12px; /* Adjusted margin for better spacing between text and button */
+}
+
+.category-card button {
+    position: absolute;
+    bottom: 15px;
+    width: calc(100% - 30px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Updated styles for the Deal of the Day card */
+.deal-card {
+    height: 250px; /* Adjusted height for the cards */
+    padding: 15px; /* Added padding for better spacing */
+}
+
+.deal-card img {
+    height: 50%; /* Adjusted height for the image */
+    margin-bottom: 10px; /* Adjust margin between image and text */
+}
+
+.deal-card h3 {
+    font-size: 1em; /* Adjusted font size for the heading */
+    margin-bottom: 8px; /* Updated margin for better spacing between heading and description */
+}
+
+.deal-card p {
+    font-size: 0.8em; /* Adjusted font size for the description */
+    margin-top: 8px; /* Updated margin for better spacing between text and button */
+    margin-bottom: 12px; /* Adjusted margin for better spacing between text and button */
+}
+
+.deal-card button {
+    position: absolute;
+    bottom: 15px;
+    width: calc(100% - 30px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.scrollable-row {
+    white-space: nowrap;
+    overflow-x: auto;
+    margin-bottom: 20px;
+    display: flex;
+    overflow: hidden; /* Hide the scroll bars */
+}
+
+/* ... (rest of your styles) */
+/* Your existing styles here */
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #444;
+    padding: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.nav-logo img {
+    max-height: 50px; /* Adjust as needed */
+}
+
+.nav-search {
+    display: flex;
+    align-items: center;
+}
+
+.nav-search input {
+    padding: 5px;
+    margin-right: 5px;
+    border: 1px solid #ddd;
+}
+
+.nav-search button {
+    padding: 5px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 2; /* Takes the available space */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icons a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.nav-cart i,
+.nav-login,
+.nav-signup {
+    font-size: 1.5em;
+}
+/* Your existing styles here */
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #444;
+    padding: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+
+.nav-search {
+    display: flex;
+    align-items: center;
+}
+.nav-search input {
+    padding: 10px;
+    margin-right: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.nav-search button {
+    padding: 10px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 2; /* Takes the available space */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #555;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #777;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icons a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.nav-cart i,
+.nav-dropdown i {
+    font-size: 1.5em;
+}
+
+.fa-chevron-down {
+    margin-left: 5px;
+}
+
+
+
+.nav-search {
+    display: flex;
+    align-items: center;
+}
+
+.nav-search input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.nav-search button {
+    padding: 10px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-cart i {
+    font-size: 1.8em;
+}
+
+/* ... (remaining styles) */
